@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EventSynth - 航空事件智能合成系统</title>
+  <!-- Tailwind CSS (免费 CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1e40af', // 深蓝色，专业感
+            secondary: '#dbeafe'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .feature-card:hover { @apply shadow-lg transform -translate-y-1 transition-all; }
+    .demo-btn { @apply bg-gradient-to-r from-blue-600 to-indigo-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:from-blue-700 hover:to-indigo-800 transition-all; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <!-- Header -->
+  <header class="bg-white shadow-sm">
+    <div class="container mx-auto px-4 py-6 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-primary">EventSynth</h1>
+      <nav>
+        <a href="#about" class="mx-2 hover:text-primary">关于</a>
+        <a href="#features" class="mx-2 hover:text-primary">功能</a>
+        <a href="#demo" class="mx-2 hover:text-primary">试用</a>
+        <a href="#contact" class="mx-2 hover:text-primary">联系</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-blue-50 to-indigo-100 py-16">
+    <div class="container mx-auto px-4 text-center max-w-3xl">
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-6">航空事件智能合成系统</h1>
+      <p class="text-xl text-gray-700 mb-8">
+        基于 LLM 增强的生成式模型，自动清洗并合成符合业务逻辑的航空事件流，解决真实场景数据稀缺问题。
+      </p>
+      <a href="#demo" class="demo-btn inline-block">✨ 在线试用</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-16 bg-white">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <h2 class="text-3xl font-bold text-center mb-12">为什么需要 EventSynth？</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-gray-50 p-6 rounded-xl">
+          <h3 class="text-xl font-semibold mb-3 text-primary">行业痛点</h3>
+          <ul class="list-disc pl-5 space-y-2 text-gray-700">
+            <li>航空事件数据稀疏、标注成本高</li>
+            <li>人工构造数据逻辑不一致</li>
+            <li>仿真测试缺乏多样化场景</li>
+          </ul>
+        </div>
+        <div class="bg-blue-50 p-6 rounded-xl">
+          <h3 class="text-xl font-semibold mb-3 text-primary">我们的方案</h3>
+          <ul class="list-disc pl-5 space-y-2 text-gray-700">
+            <li>LLM 自动补全缺失字段（如起降机场）</li>
+            <li>逻辑合理性验证，过滤无效事件</li>
+            <li>支持增量训练，适配新业务场景</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <h2 class="text-3xl font-bold text-center mb-12">核心功能</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="feature-card bg-white p-6 rounded-xl shadow">
+          <div class="text-blue-600 text-3xl mb-3">📤</div>
+          <h3 class="font-bold text-lg mb-2">一键上传</h3>
+          <p>支持批量上传 YAML 格式事件数据</p>
+        </div>
+        <div class="feature-card bg-white p-6 rounded-xl shadow">
+          <div class="text-blue-600 text-3xl mb-3">🧹</div>
+          <h3 class="font-bold text-lg mb-2">自动清洗</h3>
+          <p>调用大模型补全并验证事件逻辑</p>
+        </div>
+        <div class="feature-card bg-white p-6 rounded-xl shadow">
+          <div class="text-blue-600 text-3xl mb-3">✨</div>
+          <h3 class="font-bold text-lg mb-2">智能生成</h3>
+          <p>输出高质量 JSON 事件流，可直接用于仿真</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Demo -->
+  <section id="demo" class="py-16 bg-white">
+    <div class="container mx-auto px-4 text-center max-w-3xl">
+      <h2 class="text-3xl font-bold mb-6">在线试用</h2>
+      <p class="text-gray-700 mb-8">
+        无需安装，直接在浏览器中体验完整功能。
+      </p>
+      <!-- 替换 YOUR_VM_IP 为你的虚拟机公网IP和端口 -->
+      <a href="http://YOUR_VM_IP:7860" target="_blank" class="demo-btn inline-block">
+        🔗 打开交互界面
+      </a>
+      <p class="mt-4 text-sm text-gray-500">
+        （首次加载可能需要 10-20 秒）
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4 max-w-2xl text-center">
+      <h2 class="text-3xl font-bold mb-6">获取更多信息</h2>
+      <p class="text-gray-700 mb-6">
+        本软件由博士生独立开发，适用于航空风险分析、仿真测试等场景。
+        <br>欢迎企业合作与技术交流。
+      </p>
+      <div class="space-y-4">
+        <div>
+          <span class="font-medium">📧 邮箱：</span>
+          <a href="mailto:your.email@university.edu" class="text-primary hover:underline">
+            your.email@university.edu
+          </a>
+        </div>
+        <div>
+          <span class="font-medium">💼 求职意向：</span>
+          <span>AI 工程师 / 算法工程师 / 数据科学家</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-6">
+    <div class="container mx-auto px-4 text-center">
+      <p>© 2025 EventSynth. 保留所有权利。非科研用途请联系作者。</p>
+    </div>
+  </footer>
+</body>
+</html>
